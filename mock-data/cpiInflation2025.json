@@ -1,0 +1,6 @@
+[
+  { "region": "World", "value": -0.2 },
+  { "region": "US", "value": 0.4 },
+  { "region": "China", "value": -0.6 },
+  { "region": "Euro Area", "value": -0.2 }
+]

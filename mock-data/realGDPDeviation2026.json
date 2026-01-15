@@ -1,0 +1,7 @@
+[
+  { "country": "US", "year2026": 1.2, "longTerm": 0.8 },
+  { "country": "China", "year2026": 2.5, "longTerm": 3.0 },
+  { "country": "Euro Area", "year2026": 0.5, "longTerm": 0.7 },
+  { "country": "Japan", "year2026": 0.8, "longTerm": 0.9 },
+  { "country": "India", "year2026": 1.5, "longTerm": 1.7 }
+]
