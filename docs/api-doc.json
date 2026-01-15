@@ -1,0 +1,107 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Charts API",
+    "version": "1.0.0",
+    "description": "API for fetching economic charts data"
+  },
+  "paths": {
+    "/api/world-trade-growth": {
+      "get": {
+        "summary": "Get World Trade Growth data",
+        "responses": {
+          "200": {
+            "description": "Array of date/value objects",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "date": { "type": "string" },
+                      "value": { "type": "number" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/cpi-inflation": {
+      "get": {
+        "summary": "Get CPI Inflation 2025 data",
+        "responses": {
+          "200": {
+            "description": "Array of region/value objects",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "region": { "type": "string" },
+                      "value": { "type": "number" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/real-gdp-growth": {
+      "get": {
+        "summary": "Get Real GDP Growth 2025 data",
+        "responses": {
+          "200": {
+            "description": "Array of region/value objects",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "region": { "type": "string" },
+                      "value": { "type": "number" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/real-gdp-deviation": {
+      "get": {
+        "summary": "Get Real GDP Deviation 2026 data",
+        "responses": {
+          "200": {
+            "description": "Array of country/year2026/longTerm objects",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "country": { "type": "string" },
+                      "year2026": { "type": "number" },
+                      "longTerm": { "type": "number" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

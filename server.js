@@ -9,11 +9,12 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 
-// Load YAML file
-const swaggerDocument = YAML.load(path.join(__dirname, "docs", "api-doc.yaml"));
 
 // Swagger route
+const swaggerDocument = require("./docs/api-doc.json");
+
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 
 // Helper to read JSON files
 const readJSON = (filename) => {
