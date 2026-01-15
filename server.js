@@ -1,11 +1,19 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
+const swaggerUi = require("swagger-ui-express");
+const YAML = require("yamljs");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
+
+// Load YAML file
+const swaggerDocument = YAML.load(path.join(__dirname, "docs", "api-doc.yaml"));
+
+// Swagger route
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Helper to read JSON files
 const readJSON = (filename) => {
